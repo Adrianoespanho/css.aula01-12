@@ -1,0 +1,58 @@
+body{
+    background: rgb(101, 126, 143);
+    color:blue;
+    text-align: center;
+    font-family: arial;
+
+}
+.titulo{
+    font-size: 40px;
+
+}
+.imagem{
+    /* border:1px solid black */
+    transform: scale(0.2) rotate(50deg);
+    animation: piscar 18s infinite;
+
+}
+@keyframes piscar{
+   0%{
+    opacity: 1;
+    transform:scale(0.8);
+   }
+
+   10%{
+    opacity: 0.2;
+    transform: scale(1);
+   }
+}
+.texto{
+    text-align: justify;
+    column-count: 3;
+    column-gap: 30px;
+    line-height: 22px;
+
+}
+@media only screen and (max-widh:699px) and (min-widh:500px){
+    body{
+       background: darkblue;
+    }
+    .texto{
+        column-count: 2;
+    }
+    .imagem{
+        transform: translateX(100px)
+    }
+}
+@media only screen and (max-widh:499px){
+    body{
+        background: darkgoldenrod;
+    }
+
+    .imagem{
+        display: nome;
+    }
+    .texto{
+        column-count: 1;
+    }
+}
